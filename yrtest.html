@@ -1,10 +1,446 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>你好，GitHub</title>
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+      integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
-    <h1>覺得厲害</h1>
+    <style type="text/css">
+      #app {
+        margin: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+    </style>
+    <div id="app">
+      Process:
+      <select class="form-control row" v-model="ForWho">
+        <option disabled value="">公司或顧客</option>
+        <option>Customer</option>
+        <option>Factory</option>
+      </select>
+      <br />
+      <div v-if="ForWho == 'Factory'">
+        <div class="form-group row">
+          width:
+          <input
+            type="number"
+            step="0.1"
+            id="width"
+            placeholder="Enter width"
+            class="form-control"
+            v-model="width"
+          /><br /><br />
+          length:
+          <input
+            type="number"
+            step="0.1"
+            id="length"
+            placeholder="Enter
+      width"
+            class="form-control"
+            v-model="length"
+          /><br /><br />
+          material:
+          <select class="form-control" v-model="material">
+            <option disabled value="">請選擇材質</option>
+            <option>acrylic 2mm 透明壓克力</option>
+            <option>Pp霧</option>
+            <option>PVC + 5mm</option>
+          </select>
+          <br /><br />
+          Quantity:
+          <input
+            type="number"
+            step="1"
+            min="0"
+            id="fQuantity"
+            placeholder="Enter Quantity"
+            class="form-control"
+            v-model="Qty"
+          /><br />
+        </div>
+
+        <br />
+        <div class="form-group column">
+          <p v-if="CBM <= '33'">才:{{CBM}}</p>
+          <p>單價:{{price}}</p>
+          <p>裁切:{{Cut}}</p>
+          <p>總價:{{Total}}</p>
+        </div>
+        <br /><br />
+
+        <!----SOP---->
+        <ul
+          v-if="material == 'acrylic 2mm 透明壓克力'"
+          style="list-style-type: decimal"
+          class="list-group"
+        >
+          <li>總尺寸為: {{width}}mm * {{length}}mm</li>
+          <li>夾層順序: 壓克力 ->彩墨->白墨</li>
+          <li>
+            請留意 彩墨/白墨的相對範圍有可能不同（彩墨=白墨 or 彩墨>白墨）
+          </li>
+          <li>材質為: {{material}}</li>
+          <li>壓克力紙膜撕開後需小心保護勿刮傷</li>
+          <li>
+            請符合以上條件製作,有任何問題請聯絡 <br />0989515123 設計李先生,
+            0922576813 徐先生
+          </li>
+        </ul>
+
+        <ul v-else style="list-style-type: decimal" class="list-group">
+          <li>總尺寸為: {{width}}mm * {{length}}mm</li>
+          <li>只印刷藍框內圖,藍線及文字說明不印刷</li>
+          <li>滿版圖,不要有白邊請裁切,誤差+-1mm</li>
+          <li>材質為: {{material}}</li>
+          <li>請使用機器裁切,相同機台印刷</li>
+          <li>請保護包裝,平放勿捲</li>
+          <li>
+            請符合以上條件製作,有任何問題請聯絡 <br />0989515123 設計李先生,
+            0922576813 徐先生
+          </li>
+        </ul>
+        <!-- <ul v-else style="list-style-type: decimal">
+        <li>總尺寸為: {{width}}mm * {{length}}mm</li>
+        <li>只印刷藍框內圖,藍線及文字說明不印刷</li>
+        <li>滿版圖,不要有白邊請裁切,誤差+-1mm</li>
+        <li>材質為: {{material}}</li>
+        <li>請使用機器裁切,相同機台印刷</li>
+        <li>請保護包裝,平放勿捲</li>
+        <li>
+          請符合以上條件製作,有任何問題請聯絡 <br />0989515123 設計李先生,
+          0922576813 徐先生
+        </li>
+      </ul> -->
+
+        <p>{{bDate}}</p>
+        <p>{{Doc}}</p>
+
+        <!-- <p v-if="books == 'full'">111</p>
+      <p v-if="books == 'less'">222</p>
+       -->
+      </div>
+      <div v-if="ForWho == 'Customer'">
+        <div class="form-group row">
+          width:
+          <input
+            type="number"
+            step="0.1"
+            id="width"
+            placeholder="Enter width"
+            class="form-control"
+            v-model="width"
+          /><br /><br />
+          length:
+          <input
+            type="number"
+            step="0.1"
+            id="length"
+            placeholder="Enter
+      width"
+            class="form-control"
+            v-model="length"
+          /><br /><br />
+          material:
+          <select class="form-control" v-model="material">
+            <option disabled value="">請選擇材質</option>
+            <option>acrylic 2mm 透明壓克力</option>
+            <option>Pp霧</option>
+            <option>PVC + 5mm</option>
+          </select>
+          <br /><br />
+          Quantity:
+          <input
+            type="number"
+            step="1"
+            min="0"
+            id="fQuantity"
+            placeholder="Enter Quantity"
+            class="form-control"
+            v-model="Qty"
+          /><br />
+        </div>
+
+        <br />
+        <div class="form-group column">
+          <p v-if="CBM <= '32'">才:{{CBM}}</p>
+          <!-- <p>單價:{{price}}</p>
+          <p>裁切:{{Cut}}</p> -->
+          <p v-show="material !== 'acrylic 2mm 透明壓克力'">美圖:{{Total}}</p>
+          <p>價格:{{Frame}}</p>
+        </div>
+        <br /><br />
+
+        <!----SOP---->
+
+        <!-- <ul v-else style="list-style-type: decimal">
+        <li>總尺寸為: {{width}}mm * {{length}}mm</li>
+        <li>只印刷藍框內圖,藍線及文字說明不印刷</li>
+        <li>滿版圖,不要有白邊請裁切,誤差+-1mm</li>
+        <li>材質為: {{material}}</li>
+        <li>請使用機器裁切,相同機台印刷</li>
+        <li>請保護包裝,平放勿捲</li>
+        <li>
+          請符合以上條件製作,有任何問題請聯絡 <br />0989515123 設計李先生,
+          0922576813 徐先生
+        </li>
+      </ul> -->
+
+        <!-- <p v-if="books == 'full'">111</p>
+      <p v-if="books == 'less'">222</p>
+       -->
+      </div>
+    </div>
   </body>
 </html>
+<script type="text/javascript">
+  var app = new Vue({
+    el: "#app",
+    data: {
+      width: "210",
+      length: "297",
+      Qty: "1",
+      material: "",
+      ForWho: "",
+
+      //   books: "full",
+    },
+    computed: {
+      CBM: function () {
+        return (this.width * this.length * this.Qty) / 90000;
+      },
+      price: function () {
+        if (this.ForWho == "Customer") {
+          switch (this.material) {
+            case "Pp霧":
+              return Math.ceil(this.CBM) * 16;
+            case "PVC + 5mm":
+              return Math.ceil(this.CBM) * 48;
+            case "acrylic 2mm 透明壓克力":
+              return Math.ceil(this.CBM) * 48;
+          }
+        } else {
+          switch (this.material) {
+            case "Pp霧":
+              return Math.ceil(this.CBM) * 16;
+            case "PVC + 5mm":
+              return Math.ceil(this.CBM) * (18 + 30);
+            case "acrylic 2mm 透明壓克力":
+              return Math.ceil(this.CBM) * (63 + 22);
+          }
+        }
+        // if (this.material == "Pp霧") {
+        //   return Math.ceil(this.CBM) * 16;
+        // } else if (this.material == "PVC + 5mm") {
+        //   return Math.ceil(this.CBM) * (18 + 30);
+        // } else {
+        //   return Math.ceil(this.CBM) * (63 + 22);
+        // }
+      },
+      Cut: function () {
+        if (this.CBM * 8 <= 100) {
+          return 100;
+        } else {
+          return Math.ceil(this.CBM * 8);
+        }
+      },
+      Total: function () {
+        if (this.ForWho == "Customer") {
+          if (this.material == "acrylic 2mm 透明壓克力") {
+            // if (this.price <= 100) {
+            //   return 800 + this.Cut + "(單價不足800)";
+            // } else {
+            //   s1 = Math.ceil(this.price + this.Cut);
+            //   s2 = Math.ceil(s1 * 0.1) / 0.1;
+            //   s3 = (Math.ceil(s2 * 1.5 * 0.1) / 0.1) * 2;
+            //   return s3 * 2;
+            // }
+            s1 = Math.ceil(this.price + this.Cut);
+            s2 = Math.ceil(s1 * 0.1) / 0.1;
+            s3 = (Math.ceil(s2 * 1.5 * 0.1) / 0.1) * 2;
+            return s3 * 2;
+          }
+          if (this.material == "Pp霧") {
+            // if (this.price <= 100) {
+            //   // return 100 + this.Cut + "(單價不足100)";
+            // } else {
+            // s1 = Math.ceil(this.price + this.Cut);
+            // return (Math.ceil(s1 * 1.5 * 0.1) / 0.1) * 2;
+            // }
+            s1 = Math.ceil(this.price + this.Cut);
+            return (Math.ceil(s1 * 1.5 * 0.1) / 0.1) * 2;
+          }
+          if (this.material == "PVC + 5mm") {
+            // if (this.price <= 100) {
+            //   return 200 + this.Cut + "(單價不足200)";
+            // } else {
+            //   s1 = Math.ceil(this.price + this.Cut);
+            //   s2 = Math.ceil(s1 * 0.1) / 0.1;
+            //   s3 = (Math.ceil(s2 * 1.5 * 0.1) / 0.1) * 2;
+            //   return s3;
+            // }
+            //   return this.price + this.Cut;
+            s1 = Math.ceil(this.price + this.Cut);
+            s2 = Math.ceil(s1 * 0.1) / 0.1;
+            s3 = (Math.ceil(s2 * 1.5 * 0.1) / 0.1) * 2;
+            return s3;
+          }
+        } else {
+          if (this.material == "acrylic 2mm 透明壓克力") {
+            if (this.price <= 100) {
+              return 800 + this.Cut + "(單價不足800)";
+            } else {
+              return this.price + this.Cut;
+            }
+          }
+          if (this.material == "Pp霧") {
+            if (this.price <= 100) {
+              return 100 + this.Cut + "(單價不足100)";
+            } else {
+              return this.price + this.Cut;
+            }
+          }
+          if (this.material == "PVC + 5mm") {
+            if (this.price <= 100) {
+              return 200 + this.Cut + "(單價不足200)";
+            } else {
+              return this.price + this.Cut;
+            }
+            //   return this.price + this.Cut;
+          }
+        }
+      },
+      Frame: function () {
+        // ROUNDUP(300*C12/841+2400*F12/499554,-2)
+        s1 = this.width * this.length + 63 * this.length * 2;
+        s2 = (300 * this.length) / 841 + (2400 * s1) / 499554;
+        s3 = s2 * 0.01;
+        s4 = Math.ceil(s3) * 100 * 2 * 1.25;
+        s5 = Math.ceil(s3) * 100;
+        // return s4 * this.Qty;
+        if (this.material == "acrylic 2mm 透明壓克力") {
+          return s4;
+        } else {
+          return s5;
+        }
+      },
+      /* if (this.price <= 100) {
+        return 100 + this.Cut + "(單價不足100)";
+      }
+      if (this.material == "acrylic 2mm 透明壓克力") {
+        return 800 + this.Cut;
+      } else {
+        return this.price + this.Cut;
+      }
+        return this.price + this.Cut;*/
+      bDate: function () {
+        var today = new Date();
+        var Day = 24 * 60 * 60;
+        // today.setTime(today.getTime() + Day);
+        //  day1.setTime(day1.getTime()+ Day);
+        day_list = ["日", "一", "二", "三", "四", "五", "六"];
+        day = today.getDay();
+        switch (day) {
+          case 0:
+            Day_ = Day * 3000;
+            today.setTime(today.getTime() + Day_);
+            break;
+          case 1:
+            Day_ = Day * 3000;
+            today.setTime(today.getTime() + Day_);
+            break;
+          case 2:
+            Day_ = Day * 3000;
+            today.setTime(today.getTime() + Day_);
+            break;
+          case 3:
+            Day_ = Day * 6000;
+            today.setTime(today.getTime() + Day_);
+            break;
+          case 4:
+            Day_ = Day * 5000;
+            today.setTime(today.getTime() + Day_);
+            break;
+          case 5:
+            Day_ = Day * 5000;
+            today.setTime(today.getTime() + Day_);
+            break;
+          case 6:
+            Day_ = Day * 4000;
+            today.setTime(today.getTime() + Day_);
+            break;
+        }
+
+        delivery =
+          "預計交期為:" +
+          today.getFullYear() +
+          "/" +
+          (today.getMonth() + 1) +
+          "/" +
+          today.getDate() +
+          "(星期" +
+          day_list[today.getDay()] +
+          ")";
+        return delivery;
+      },
+
+      Doc: function () {
+        var today = new Date();
+        var yyyy = today.getFullYear();
+        var MM =
+          today.getMonth() + 1 >= 10
+            ? today.getMonth() + 1
+            : "0" + (today.getMonth() + 1);
+        var dd = today.getDate() < 10 ? "0" + today.getDate() : today.getDate();
+        var hh =
+          today.getHours() < 10 ? "0" + today.getHours() : today.getHours();
+        var mm =
+          today.getMinutes() < 10
+            ? "0" + today.getMinutes()
+            : today.getMinutes();
+        var getToday = yyyy + "" + MM + "" + dd + "" + hh + "" + mm;
+        return getToday;
+      },
+    },
+
+    // watch: {
+    //   first_name: function () {
+    //     return (this.name = this.first_name + " " + last_name);
+    //   },
+    //   last_name: function () {
+    //     return (this.name = this.first_name + " " + last_name);
+    //   },
+    // },
+    // created: function () {
+    //   return (this.name = this.first_name + "" + this.last_name);
+    // },
+
+    //     created: function () {
+    //       return console.log("123");
+    //     },
+  });
+</script>
