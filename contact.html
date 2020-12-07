@@ -9,8 +9,9 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="js/jquery.min.js"></script>
 
-	<script src="js/jquery.min.js"></script>
+    
 		<!-- <meta name = "keywords" content = "納豆,樟芝,膠原,諾麗NONI,酵素"> -->
 	<meta name = "keywords" content = "保健食品,原物料,功能性原料,配方設計,植物萃取">
     <meta name = "robot" content = "index,follow">
@@ -38,14 +39,14 @@
   ga('create', 'UA-85539218-2', 'auto');
   ga('send', 'pageview');
 
-</script><title>歡迎光臨新樂康有限公司</title>  
+</script><title>歡迎光臨新樂康有限公司</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/site.min.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
-
+	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -55,11 +56,26 @@
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
     <!-- link href="css/justified-nav.css" rel="stylesheet"-->
+	<style>
+	div#page {
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 20px;
+	}
+
+	
+
+	</style>
 
   </head>
 <!-- NAVBAR
 ================================================== -->
-<body>
+  <body>
+
+	    
+
+
 
   <!--nav class="navbar-inverse navbar-static-top" style="background-color: #99ddbb;"-->
  
@@ -123,7 +139,7 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
               
-			  <li><a href='index.html'><font size='4'>首頁</font></a></li><li><a href='about.html'><font size='4'>關於我們</font></a></li><li class='dropdown'>
+			  <li><a href='index.php'><font size='4'>首頁</font></a></li><li><a href='about.php'><font size='4'>關於我們</font></a></li><li class='dropdown'>
                   <a href='#' class='dropdown-toggle' data-toggle='dropdown'><font size='4'>保健原料</font> <span class='caret'></span></a>
                   <ul class='dropdown-menu' role='menu'>
                     <li><a href='product.php?category=1#sec0'><font size='4'>原料類別</font></a></li>
@@ -136,7 +152,7 @@
                     <li><a href='mdesign.php#section0'><font size='4'>ODM</font></a></li>
                     <li><a href='mdesign.php#section1'><font size='4'>劑型開發</font></a></li>
                   </ul>
-                </li><li><a href='#'><font size='4'>健康資訊</font></a></li><li><a href='trading.html'><font size='4'>兩岸正貿案例</font></a></li><li><a href='contact.php'><font size='4'>聯絡我們</font></a></li>
+                </li><li><a href='#'><font size='4'>健康資訊</font></a></li><li><a href='trading.php'><font size='4'>兩岸正貿案例</font></a></li><li><a href='contact.php'><font size='4'>聯絡我們</font></a></li>
 
 				
 						
@@ -144,29 +160,47 @@
 				</ul>	
             </div>
           </div>
-        </nav>    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" style='margin-bottom: 0' class="carousel slide " data-ride="carousel" >
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="header item active"  style="background-image: url(images/45757.jpg)" >
-          <div class="container">
-            <div class="carousel-caption" >
-              <h1>守護健康，源自最天然的素材</h1>
-            </div>
-          </div>
-        </div>
-	   </div>
-    </div><!-- /.carousel -->
+        </nav>
+ <div class="container text-center" style="margin-top:20px">
 
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-        <!-- FOOTER -->
+      
+   	</div>
+	
+</div>
+<!-- <hr class="text-center" style="color: #f00;background-color: #ccc;height: 1px;width:80%;"> -->
+ <!--div class="container"-->
+
+  <!-- START THE FEATURETTES -->
+    <div class='container' ><a id='section0'></a><div class='row featurette'  ><div class='row-md-7 row-md-pull-5'>
+          
+		   <h2 class='featurette-heading text-center'>聯絡我們<span class='text-muted'></span></h2><p class='lead'><div align="center">
+	<p>
+		<img alt="" src="./images/logo.png" style="width: 333px;  border-width: 0px; border-style: solid;" /></p>
+	<p>
+			    <div class="container about text-center">
+			    E-mail: admin@bio-true.com.tw<br />
+		台灣總公司：新樂康有限公司 &nbsp;&nbsp;&nbsp;地址：台中市太平區新興二街130號4F-1 <br>電話：+886-4-23960263 傳真：+886-4-23960273<br />
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.3267012558963!2d120.70360501542679!3d24.160272584388835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917fdd345ade3%3A0x15a938da6759c7d1!2zNDEx5Y-w5Lit5biC5aSq5bmz5Y2A5paw6IiI5LqM6KGXMTMw6Jmf!5e0!3m2!1szh-TW!2stw!4v1477384531229" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><p>
+<br>
+中國辦事處：杭州欣生喜生物技術有限公司 
+地址：杭州市下城區武林新村104號1幢2102室 <br />
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.939674697422!2d120.16030831553454!3d30.267299981801692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x344c9d7f72720fb5%3A0xf98abb2a6b1ca329!2z6LO95qiC5YyW5bel5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1477384652897" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<br>
+
+		
+			    </div>	
+
+</div></p></div>
+      </div>
+	  </div> 
+     
+
+
+   <!--/div-->
+      <!-- /END THE FEATURETTES -->
+	  
+	      <!-- FOOTER -->
     </div><!-- /.container -->
 	<div>
 	<div>
@@ -197,16 +231,18 @@ E-mail: admin@bio-true.com.tw<br />
       </footer>
 	  </div>
 
+
+	
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
-
     <!-- Placed at the end of the document so the pages load faster -->
-
+    
     <script src="js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+		<script src="js/backtotop.js"></script>
     <script src="js/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-
   </body>
 </html>

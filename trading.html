@@ -1,17 +1,17 @@
 
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- meta name="viewport" content="width=device-width, initial-scale=1" -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!DOCTYPE html>
+    <html lang="zh">
 
-	<script src="js/jquery.min.js"></script>
-		<!-- <meta name = "keywords" content = "納豆,樟芝,膠原,諾麗NONI,酵素"> -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- meta name="viewport" content="width=device-width, initial-scale=1" -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <script src="js/jquery.min.js"></script>
+        	<!-- <meta name = "keywords" content = "納豆,樟芝,膠原,諾麗NONI,酵素"> -->
 	<meta name = "keywords" content = "保健食品,原物料,功能性原料,配方設計,植物萃取">
     <meta name = "robot" content = "index,follow">
 
@@ -38,30 +38,34 @@
   ga('create', 'UA-85539218-2', 'auto');
   ga('send', 'pageview');
 
-</script><title>歡迎光臨新樂康有限公司</title>  
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/site.min.css" rel="stylesheet">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+</script><title>歡迎光臨新樂康有限公司</title>            <!-- Bootstrap core CSS -->
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="css/site.min.css" rel="stylesheet">
+            <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+            <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+            <script src="js/ie-emulation-modes-warning.js"></script>
+            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <!-- Custom styles for this template -->
-    <link href="css/carousel.css" rel="stylesheet">
-    <!-- link href="css/justified-nav.css" rel="stylesheet"-->
-
-  </head>
-<!-- NAVBAR
+            <!-- Custom styles for this template -->
+            <link href="css/carousel.css" rel="stylesheet">
+            <!-- link href="css/justified-nav.css" rel="stylesheet"-->
+            <style>
+            div#page {
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 20px;
+            }
+            </style>
+    </head>
+    <!-- NAVBAR
 ================================================== -->
-<body>
 
-  <!--nav class="navbar-inverse navbar-static-top" style="background-color: #99ddbb;"-->
+    <body>
+          <!--nav class="navbar-inverse navbar-static-top" style="background-color: #99ddbb;"-->
  
  <nav class="navbar-inverse navbar-static-top" role="navigation">
           <div class="container">
@@ -123,7 +127,7 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
               
-			  <li><a href='index.html'><font size='4'>首頁</font></a></li><li><a href='about.html'><font size='4'>關於我們</font></a></li><li class='dropdown'>
+			  <li><a href='index.php'><font size='4'>首頁</font></a></li><li><a href='about.php'><font size='4'>關於我們</font></a></li><li class='dropdown'>
                   <a href='#' class='dropdown-toggle' data-toggle='dropdown'><font size='4'>保健原料</font> <span class='caret'></span></a>
                   <ul class='dropdown-menu' role='menu'>
                     <li><a href='product.php?category=1#sec0'><font size='4'>原料類別</font></a></li>
@@ -136,7 +140,7 @@
                     <li><a href='mdesign.php#section0'><font size='4'>ODM</font></a></li>
                     <li><a href='mdesign.php#section1'><font size='4'>劑型開發</font></a></li>
                   </ul>
-                </li><li><a href='#'><font size='4'>健康資訊</font></a></li><li><a href='trading.html'><font size='4'>兩岸正貿案例</font></a></li><li><a href='contact.php'><font size='4'>聯絡我們</font></a></li>
+                </li><li><a href='#'><font size='4'>健康資訊</font></a></li><li><a href='trading.php'><font size='4'>兩岸正貿案例</font></a></li><li><a href='contact.php'><font size='4'>聯絡我們</font></a></li>
 
 				
 						
@@ -144,29 +148,10 @@
 				</ul>	
             </div>
           </div>
-        </nav>    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" style='margin-bottom: 0' class="carousel slide " data-ride="carousel" >
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="header item active"  style="background-image: url(images/45757.jpg)" >
-          <div class="container">
-            <div class="carousel-caption" >
-              <h1>守護健康，源自最天然的素材</h1>
-            </div>
-          </div>
-        </div>
-	   </div>
-    </div><!-- /.carousel -->
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-        <!-- FOOTER -->
+        </nav>            <div class="container text-center" style="margin-top:20px">
+                <h3>兩岸正貿案例</h3>
+                            </div>
+                <!-- FOOTER -->
     </div><!-- /.container -->
 	<div>
 	<div>
@@ -196,17 +181,15 @@ E-mail: admin@bio-true.com.tw<br />
 			    </div>	
       </footer>
 	  </div>
-
-    <!-- Bootstrap core JavaScript
+                <!-- Bootstrap core JavaScript
     ================================================== -->
+                <!-- Placed at the end of the document so the pages load faster -->
+                <script src="js/bootstrap.min.js"></script>
+                <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+                <script src="js/backtotop.js"></script>
+                <script src="js/holder.min.js"></script>
+                <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+                <script src="js/ie10-viewport-bug-workaround.js"></script>
+    </body>
 
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="js/holder.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-
-  </body>
-</html>
+    </html>
