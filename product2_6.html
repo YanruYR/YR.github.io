@@ -92,7 +92,7 @@
 						margin-top: 6PX;
 					}
 				</style>
-			<img class='shrink-logo' src="images/logo.png"  alt=歡迎光臨新樂康有限公司>			<form id='searchform' name='searchform' method='post' action='product1.html?page=0'>				
+			<img class='shrink-logo' src="images/logo.png"  alt=歡迎光臨新樂康有限公司>			<form id='searchform' name='searchform' method='post' action='product1.php?page=0'>				
 		   <div class="col-lg-3 pull-right ">
 			<div class="input-group ">
 			  <input id='searchdata' name='searchdata' type="text" class="form-control" placeholder='找產品'>
@@ -126,20 +126,20 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
               
-			  <li><a href='index.html'><font size='4'>首頁</font></a></li><li><a href='about.html'><font size='4'>關於我們</font></a></li><li class='dropdown'>
+			  <li><a href='index.php'><font size='4'>首頁</font></a></li><li><a href='about.php'><font size='4'>關於我們</font></a></li><li class='dropdown'>
                   <a href='#' class='dropdown-toggle' data-toggle='dropdown'><font size='4'>保健原料</font> <span class='caret'></span></a>
                   <ul class='dropdown-menu' role='menu'>
-                    <li><a href='product.html'><font size='4'>原料類別</font></a></li>
-                    <li><a href='product2.html'><font size='4'>品牌原料</font></a></li>
-                    <li><a href='product3.html'><font size='4'>功能性原料</font></a></li>
+                    <li><a href='product.php?category=1#sec0'><font size='4'>原料類別</font></a></li>
+                    <li><a href='product.php?category=2#sec1'><font size='4'>品牌原料</font></a></li>
+                    <li><a href='product.php?category=3#sec2'><font size='4'>功能性原料</font></a></li>
                   </ul>
                 </li><li class='dropdown'>
                   <a href='#' class='dropdown-toggle' data-toggle='dropdown'><font size='4'>配方設計</font> <span class='caret'></span></a>
                   <ul class='dropdown-menu' role='menu'>
-                    <li><a href='mdesign.html#section0'><font size='4'>ODM</font></a></li>
-                    <li><a href='mdesign.html#section1'><font size='4'>劑型開發</font></a></li>
+                    <li><a href='mdesign.php#section0'><font size='4'>ODM</font></a></li>
+                    <li><a href='mdesign.php#section1'><font size='4'>劑型開發</font></a></li>
                   </ul>
-                </li><li><a href='#'><font size='4'>健康資訊</font></a></li><li><a href='trading.html'><font size='4'>兩岸正貿案例</font></a></li><li><a href='contact.html'><font size='4'>聯絡我們</font></a></li>
+                </li><li><a href='#'><font size='4'>健康資訊</font></a></li><li><a href='trading.php'><font size='4'>兩岸正貿案例</font></a></li><li><a href='contact.php'><font size='4'>聯絡我們</font></a></li>
 
 				
 						
@@ -154,27 +154,44 @@
 	.hov3 {background-color:#eeb; }
 	.TabColor{color:white;}
 	</style>
-	<!-- <hr class="text-center" style="color: #f00;background-color: #ccc;height: 1px;"> -->
-		<ul class="nav nav-tabs">
-<li role='presentation' class='active'><a href='product.html'>原料類別</a></li><li role='presentation' ><a href='product2.html'>品牌原料</a></li><li role='presentation' ><a href='product3.html'>功能性原料</a></li>
-
-	
-	<!-- <li role="presentation"><a href="#">Profile</a></li>
-	<li role="presentation"><a href="#">Messages</a></li> -->
-</ul>
+	<hr class="text-center" style="color: #f00;background-color: #ccc;height: 1px;">
 
 	</div>
-	<br>
-	<div class='container' ><div class='row'><a href='product1.html?page=11'><div class='col-sm-6 col-md-3'><div class='thumbnail' ><img data-src='holder.js/100%x200' alt='植物草粉' src='./upload/logo/image11.jpg' data-holder-rendered='true' style='height: 200px; width: 100%; display: block;'><div class='caption text-center' style='padding:3px'><h3>植物草粉</h3></div></div></div></a><a href='product1.html?page=12'><div class='col-sm-6 col-md-3'><div class='thumbnail' ><img data-src='holder.js/100%x200' alt='植物萃取' src='./upload/logo/image12.jpg' data-holder-rendered='true' style='height: 200px; width: 100%; display: block;'><div class='caption text-center' style='padding:3px'><h3>植物萃取</h3></div></div></div></a><a href='product1.html?page=13'><div class='col-sm-6 col-md-3'><div class='thumbnail' ><img data-src='holder.js/100%x200' alt='胺基酸' src='./upload/logo/image13.jpg' data-holder-rendered='true' style='height: 200px; width: 100%; display: block;'><div class='caption text-center' style='padding:3px'><h3>胺基酸</h3></div></div></div></a><a href='product1.html?page=14'><div class='col-sm-6 col-md-3'><div class='thumbnail' ><img data-src='holder.js/100%x200' alt='食添證系列' src='./upload/logo/image14.jpg' data-holder-rendered='true' style='height: 200px; width: 100%; display: block;'><div class='caption text-center' style='padding:3px'><h3>食添證系列</h3></div></div></div></a><a href='product1.html?page=15'><div class='col-sm-6 col-md-3'><div class='thumbnail' ><img data-src='holder.js/100%x200' alt='菇菌類' src='./upload/logo/image15.jpg' data-holder-rendered='true' style='height: 200px; width: 100%; display: block;'><div class='caption text-center' style='padding:3px'><h3>菇菌類</h3></div></div></div></a><a href='product1.html?page=16'><div class='col-sm-6 col-md-3'><div class='thumbnail' ><img data-src='holder.js/100%x200' alt='動物萃取' src='./upload/logo/image16.jpg' data-holder-rendered='true' style='height: 200px; width: 100%; display: block;'><div class='caption text-center' style='padding:3px'><h3>動物萃取</h3></div></div></div></a><a href='product1.html?page=17'><div class='col-sm-6 col-md-3'><div class='thumbnail' ><img data-src='holder.js/100%x200' alt='天然油脂' src='./upload/logo/image17.jpg' data-holder-rendered='true' style='height: 200px; width: 100%; display: block;'><div class='caption text-center' style='padding:3px'><h3>天然油脂</h3></div></div></div></a><a href='product1.html?page=18'><div class='col-sm-6 col-md-3'><div class='thumbnail' ><img data-src='holder.js/100%x200' alt='天然發酵和酵素類' src='./upload/logo/image18.jpg' data-holder-rendered='true' style='height: 200px; width: 100%; display: block;'><div class='caption text-center' style='padding:3px'><h3>天然發酵和酵素類</h3></div></div></div></a><a href='product1.html?page=19'><div class='col-sm-6 col-md-3'><div class='thumbnail' ><img data-src='holder.js/100%x200' alt='特殊營養成分' src='./upload/logo/image19.jpg' data-holder-rendered='true' style='height: 200px; width: 100%; display: block;'><div class='caption text-center' style='padding:3px'><h3>特殊營養成分</h3></div></div></div></a>
+
+	  <!--=== Profile ===-->
+    <div class="profile container content">
+    	<div class="row">
+    	    <!--Left Sidebar-->
+    	    <div class="col-md-3 md-margin-bottom-40">
+	
+<style type="text/css">
+	.linka a:link{text-decoration: none ; color: #777; } 
+	.linka a:visited {text-decoration: none ; color: #777; } 
+	.linka a:hover {text-decoration: none ; color: #99C62B;}
+</style>
 
 
+<!--Left Sidebar-->
 
+     <img class="img-responsive profile-img margin-bottom-20" src="images/materials-001.jpg" alt="">
+<h2 style='text-align: center; font-family: Microsoft JhengHei' >原料類別</h2> <ul class='list-group sidebar-nav-v1 margin-bottom-20' id='sidebar-nav-1'><li class='list-group-item linka' >  <a href='product1.php?page=11'><i class='glyphicon glyphicon-user'></i>&nbsp;植物草粉</a></li><li class='list-group-item linka' >  <a href='product1.php?page=12'><i class='glyphicon glyphicon-user'></i>&nbsp;植物萃取</a></li><li class='list-group-item linka' >  <a href='product1.php?page=13'><i class='glyphicon glyphicon-user'></i>&nbsp;胺基酸</a></li><li class='list-group-item linka' >  <a href='product1.php?page=14'><i class='glyphicon glyphicon-user'></i>&nbsp;食添證系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=15'><i class='glyphicon glyphicon-user'></i>&nbsp;菇菌類</a></li><li class='list-group-item linka' >  <a href='product1.php?page=16'><i class='glyphicon glyphicon-user'></i>&nbsp;動物萃取</a></li><li class='list-group-item linka' >  <a href='product1.php?page=17'><i class='glyphicon glyphicon-user'></i>&nbsp;天然油脂</a></li><li class='list-group-item linka' >  <a href='product1.php?page=18'><i class='glyphicon glyphicon-user'></i>&nbsp;天然發酵和酵素類</a></li><li class='list-group-item linka' >  <a href='product1.php?page=19'><i class='glyphicon glyphicon-user'></i>&nbsp;特殊營養成分</a></li> </ul><h2 style='text-align: center; font-family: Microsoft JhengHei' >品牌原料</h2> <ul class='list-group sidebar-nav-v1 margin-bottom-20' id='sidebar-nav-1'><li class='list-group-item linka' >  <a href='product1.php?page=70&id=20'><i class='glyphicon glyphicon-user'></i>&nbsp;加拿大有機蔓越莓 37：1</a></li><li class='list-group-item linka' >  <a href='product1.php?page=70&id=21'><i class='glyphicon glyphicon-user'></i>&nbsp;加拿大蔓越莓 37：1</a></li><li class='list-group-item linka' >  <a href='product1.php?page=70&id=22'><i class='glyphicon glyphicon-user'></i>&nbsp;藤黃果萃取物系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=70&id=23'><i class='glyphicon glyphicon-user'></i>&nbsp;薑黃萃取物系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=70&id=24'><i class='glyphicon glyphicon-user'></i>&nbsp;金盞花萃取物系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=70&id=32'><i class='glyphicon glyphicon-user'></i>&nbsp;韓國專利半乳寡糖</a></li><li class='list-group-item linka' >  <a href='product1.php?page=70&id=33'><i class='glyphicon glyphicon-user'></i>&nbsp;韓國專利酵母胜肽</a></li> </ul><h2 style='text-align: center; font-family: Microsoft JhengHei' >功能性原料</h2> <ul class='list-group sidebar-nav-v1 margin-bottom-20' id='sidebar-nav-1'><li class='list-group-item linka' >  <a href='product1.php?page=1'><i class='glyphicon glyphicon-user'></i>&nbsp;生髮秀髮系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=2'><i class='glyphicon glyphicon-user'></i>&nbsp;腦部保養</a></li><li class='list-group-item linka' >  <a href='product1.php?page=3'><i class='glyphicon glyphicon-user'></i>&nbsp;明目系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=4'><i class='glyphicon glyphicon-user'></i>&nbsp;男性魅力系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=5'><i class='glyphicon glyphicon-user'></i>&nbsp;心臟血管系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=6'><i class='glyphicon glyphicon-user'></i>&nbsp;柔美女性系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=7'><i class='glyphicon glyphicon-user'></i>&nbsp;保肝系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=8'><i class='glyphicon glyphicon-user'></i>&nbsp;胃部保養</a></li><li class='list-group-item linka' >  <a href='product1.php?page=9'><i class='glyphicon glyphicon-user'></i>&nbsp;骨骼呵護系列</a></li><li class='list-group-item linka' >  <a href='product1.php?page=10'><i class='glyphicon glyphicon-user'></i>&nbsp;過敏系列</a></li> </ul>	         <!--Datepicker-->
+                <form action="" id="sky-form2" class="sky-form">
+                    <div id="inline-start"></div>
+                </form> 
+                <!--End Datepicker-->
+            </div>
+            <!--End Left Sidebar-->
 
+	<div class='col-md-9'><div id='main-nav'><h2>品牌原料><span style='margin-left:0em;color:#8a987d'>韓國專利半乳寡糖</h2></span><br> <div class='text-center row'><img data-src='holder.js/100%x200' alt='韓國專利半乳寡糖' src='./upload/logo/b0c356959f9058d9oilgo-2.jpg' data-holder-rendered='true'  display: block;'><div class='caption text-center'><h3>韓國專利半乳寡糖</h3></div> <div></div><div style='clear: both;'></div>
 
+       </div><!--/end row-->
+    </div><!--/container-->    
+    <!--=== End Profile ===-->
 
-</div><div id='main-nav'></div><div style='clear: both;'></div> 
+	 
  
 </div>
+
     <!-- FOOTER -->
     </div><!-- /.container -->
 	<div>
