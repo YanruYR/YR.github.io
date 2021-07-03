@@ -20,7 +20,7 @@ const NavTop = Vue.createApp({
 
           </div>
           <div class='shrink-logo'>
-            <!-- <img class='shrink-logo' style="width:242px"src="images/logo_.png" alt=歡迎光臨新樂康有限公司> -->
+            <!-- <img class='shrink-logo' style="width:242px"src="images/logo_white.png" alt=歡迎光臨新樂康有限公司> -->
           </div>
 
           <form id='searchform' name='searchform' method='post' action='search.html'>
