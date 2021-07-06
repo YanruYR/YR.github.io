@@ -1,10 +1,10 @@
 const NavTop = Vue.createApp({
-    data(){
-        return {
-            
-        }
-    },
-    template:`<nav class="navbar-inverse navbar-static-top" role="navigation">
+  data() {
+    return {
+
+    }
+  },
+  template: `<nav class="navbar-inverse navbar-static-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <!--ul class="nav navbar-nav"-->
@@ -26,15 +26,13 @@ const NavTop = Vue.createApp({
           <form id='searchform' name='searchform' method='post' action='search.html'>
             <div class="col-lg-3 pull-right ">
               <div class="input-group ">
-                <input id='searchdata' name='searchdata' type="text" class="form-control" placeholder='找產品'>
+              <input id='searchdata' name='searchdata' type="text" class="form-control"
+              placeholder='找產品'>
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" onclick="window.open('search.html', 'search','width='+(window.screen.availWidth-10)+',height='+(window.screen.availHeight-30)+ ',top=0,left=0');"><span
+                  class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 
-
-
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"
-                      aria-hidden="true"></span></button>
-
-                </span>
+            </span>
               </div><!-- /input-group搜尋按鈕 -->
             </div><!-- /.col-lg-6 -->
           </form>
@@ -124,12 +122,12 @@ NavTop.mount('#NavTop')
 
 
 const Footer = Vue.createApp({
-    data(){
-        return {
-            
-        }
-    },
-    template:`  <footer>
+  data() {
+    return {
+
+    }
+  },
+  template: `  <footer>
     <div class="container">
       <div class="row">
         <div class="col-lg-5 col-md-6 col-12">
@@ -174,5 +172,3 @@ const Footer = Vue.createApp({
 })
 
 Footer.mount('#Footer')
-
-

@@ -258,7 +258,7 @@
                 return materials.filter(place => {
 
                     const regex = new RegExp(wordToMatch, 'gi');
-                    return place.name.match(regex) || place.name_en.match(regex);
+                    return place.name.match(regex) || place.name_en.match(regex) || place.manufacture.match(regex) || place.manufacture_en.match(regex);
                 });
             }
 
@@ -268,8 +268,8 @@
                     return `
 			
 					<li>
-						<span>${place.name},${place.name_en}</span>
-						<span>${place.manufacture},${place.manufacture_en}</span>
+						<span>${place.name}(${place.name_en})</span>
+						<span>${place.manufacture}(${place.manufacture_en})</span>
 					</li>
 				
 				`;
