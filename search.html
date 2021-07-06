@@ -246,11 +246,11 @@
     <script>
         ;(function () {
 
-            const endpoint = 'jS/material_all.json';
+            const endpoint = '';
 
             const materials = [];
 
-            fetch(endpoint)
+            fetch('JS/material_all.json')
                 .then(Blob => Blob.json())
                 .then(data => materials.push(...data))
 
