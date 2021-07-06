@@ -19,7 +19,7 @@ const NavTop = Vue.createApp({
               <a href='En_index.html'>English</a> </font>
 
           </div>
-          <div class='shrink-logo' style='background-image: url(/images/logo_white.png);'>
+          <div class='shrink-logo' style='background-image: url(./images/logo_white.png);'>
             <!-- <img class='shrink-logo' style="width:242px"src="images/logo_white.png" alt=歡迎光臨新樂康有限公司> -->
           </div>
 
