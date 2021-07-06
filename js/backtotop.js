@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
 		// return false;
 	// })
 	  $(function () {
-           $('a[href*=#]:not([href=#])').click(function() {
+           $('.back-to-top').click(function() {
                var target = $(this.hash);
                $('html,body').animate({
                    scrollTop: target.offset().top
