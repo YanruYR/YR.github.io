@@ -244,13 +244,13 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script>
-        ;(function () {
+        (function () {
 
-            const endpoint = '';
+            const endpoint = 'JS/material_all.json';
 
             const materials = [];
 
-            fetch('JS/material_all.json')
+            fetch(endpoint)
                 .then(Blob => Blob.json())
                 .then(data => materials.push(...data))
 
